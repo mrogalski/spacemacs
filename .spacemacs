@@ -94,7 +94,8 @@ This function is called at the very end of Spacemacs initialization."
   (define-key evil-normal-state-map (kbd "<kp-subtract>") 'evil-numbers/dec-at-pt)
 
 
-  (setq org-agenda-files '("~/org/todo.org"))
+  (setq org-agenda-files '("~/org/todo.org"
+                           "~/org/events.org"))
   )
 
 (setq-default
