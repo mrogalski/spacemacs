@@ -80,6 +80,13 @@ This function is called at the very end of Spacemacs initialization."
 
   (setq org-agenda-files '("~/org/todo.org"
                            "~/org/events.org"))
+  (evil-leader/set-key "J" 'sp-join-sexp)  
+  (evil-leader/set-key "K" 'sp-split-sexp)
+  (evil-leader/set-key "L" 'sp-forward-slurp-sexp)
+  (evil-leader/set-key "H" 'sp-backward-slurp-sexp)
+  (evil-leader/set-key "C-h" 'sp-backward-barf-sexp)
+  (evil-leader/set-key "C-l" 'sp-forward-barf-sexp)
+  (evil-leader/set-key "SPC" 'evil-lisp-state)
   )
 
 (setq-default
