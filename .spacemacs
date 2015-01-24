@@ -62,10 +62,10 @@ This function is called at the very end of Spacemacs initialization."
   (load "~/dotfiles/spacemacs/jabber-accounts")
 
   ;; guide key
-  (setq guide-key/text-scale-amount -2)
+  (setq guide-key/text-scale-amount -1)
   (setq guide-key/popup-window-position 'bottom)
 
-  (set-face-attribute 'default nil :font "DejaVu Sans Mono 9")
+  (set-face-attribute 'default nil :font "DejaVu Sans Mono 10")
 
   ;; anthy 
   (define-obsolete-variable-alias 'last-input-char 'last-input-event "at least 19.34")
