@@ -13,22 +13,10 @@ This function is called at the very end of Spacemacs initialization."
   ;; (global-linum-mode)
   ;; (linum-relative-toggle)
 
-  (require 'cc-mode)
-
-  ;; (require 'function-args)
-  ;; (fa-config-default)
-  ;; (define-key c-mode-map  [(control tab)] 'fa-show)
-  ;; (define-key c++-mode-map  [(control tab)] 'fa-show)
-  ;; ;; (define-key c-mode-map  [(control tab)] 'moo-complete)
-  ;; ;; (define-key c++-mode-map  [(control tab)] 'moo-complete)
-  ;; (define-key c-mode-map (kbd "M-o")  'fa-show)
-  ;; (define-key c++-mode-map (kbd "M-o")  'fa-show)
-
-  ;; (require 'company)
-  ;; (add-to-list 'company-backends 'company-c-headers)
-
+  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/jabber-20141223.1624")
 
   (require 'jabber)
+
   (define-key jabber-chat-mode-map (kbd "<C-return>") 'newline)
   (define-key jabber-chat-mode-map (kbd "RET") 'jabber-chat-buffer-send)
   (define-key jabber-roster-mode-map (kbd "RET") 'jabber-roster-ret-action-at-point)
