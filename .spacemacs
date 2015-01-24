@@ -22,10 +22,6 @@ This function is called at the very end of Spacemacs initialization."
   (define-key jabber-roster-mode-map (kbd "RET") 'jabber-roster-ret-action-at-point)
   (setq jabber-history-dir "~/dotfiles/jabber-history/")
 
-  (add-hook 'jabber-alert-info-message-hooks (quote (jabber-info-echo jabber-info-display)))
-  (add-hook 'jabber-alert-message-hooks (quote (jabber-message-echo jabber-message-scroll)))
-  (add-hook 'jabber-alert-muc-hooks (quote (jabber-muc-echo jabber-muc-scroll)))
-  (add-hook 'jabber-alert-presence-hooks (quote (jabber-presence-echo)))
 
   (defun awesomewm-notification (from buffer text title)
     (let ((who (replace-regexp-in-string "/.*$" "" from))
