@@ -22,6 +22,10 @@ This function is called at the very end of Spacemacs initialization."
   (define-key jabber-roster-mode-map (kbd "RET") 'jabber-roster-ret-action-at-point)
   (setq jabber-history-dir "~/dotfiles/jabber-history/")
 
+  (add-hook 'jabber-alert-info-message-hooks (quote (jabber-info-echo jabber-info-display)))
+  (add-hook 'jabber-alert-message-hooks (quote (jabber-message-echo jabber-message-scroll)))
+  (add-hook 'jabber-alert-muc-hooks (quote (jabber-muc-echo jabber-muc-scroll)))
+  (add-hook 'jabber-alert-presence-hooks (quote (jabber-presence-echo)))
 
   (defun awesomewm-notification (from buffer text title)
     (let ((who (replace-regexp-in-string "/.*$" "" from))
@@ -87,6 +91,8 @@ This function is called at the very end of Spacemacs initialization."
   (evil-leader/set-key "C-h" 'sp-backward-barf-sexp)
   (evil-leader/set-key "C-l" 'sp-forward-barf-sexp)
   (evil-leader/set-key "SPC" 'evil-lisp-state)
+
+  (evil-leader/set-key "o a" 'align-cljlet)
 
   (require 'compile)
   (add-to-list 'compilation-error-regexp-alist-alist
@@ -227,10 +233,6 @@ static char *gnus-pointer[] = {
  '(hl-paren-colors (quote ("#326B6B")))
  '(ido-enable-regexp t)
  '(if (version< emacs-version "24.4") t)
- '(jabber-alert-info-message-hooks (quote (jabber-info-echo jabber-info-display)))
- '(jabber-alert-message-hooks (quote (jabber-message-echo jabber-message-scroll)))
- '(jabber-alert-muc-hooks (quote (jabber-muc-echo jabber-muc-scroll)))
- '(jabber-alert-presence-hooks (quote (jabber-presence-echo)))
  '(jabber-avatar-verbose nil)
  '(jabber-backlog-days 10)
  '(jabber-backlog-number 20)
