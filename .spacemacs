@@ -112,6 +112,8 @@ Display the results in a hyperlinked *compilation* buffer."
 Display the results in a hyperlinked *compilation* buffer."
     (interactive)
     (compile (concat "lein kibit " buffer-file-name)))
+
+  (evil-set-initial-state 'cider-stacktrace-mode 'emacs)
   
   )
 
