@@ -115,12 +115,7 @@ Display the results in a hyperlinked *compilation* buffer."
 
   (evil-set-initial-state 'cider-stacktrace-mode 'emacs)
   
-  )
-
-
-(setq-default
- ;; default theme applied at startup
-  dotspacemacs-default-theme 'hc-zenburn)
+)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
