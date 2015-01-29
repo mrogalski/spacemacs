@@ -14,7 +14,7 @@ This function is called at the very end of Spacemacs initialization."
   ;; (global-linum-mode)
   ;; (linum-relative-toggle)
 
-  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/jabber-20141223.1624")
+  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/jabber-20150127.745/")
 
   (require 'jabber)
 
@@ -23,10 +23,9 @@ This function is called at the very end of Spacemacs initialization."
   (define-key jabber-roster-mode-map (kbd "RET") 'jabber-roster-ret-action-at-point)
   (setq jabber-history-dir "~/dotfiles/jabber-history/")
 
-  (add-hook 'jabber-alert-info-message-hooks (quote (jabber-info-echo jabber-info-display)))
-  (add-hook 'jabber-alert-message-hooks (quote (jabber-message-echo jabber-message-scroll)))
-  (add-hook 'jabber-alert-muc-hooks (quote (jabber-muc-echo jabber-muc-scroll)))
-  (add-hook 'jabber-alert-presence-hooks (quote (jabber-presence-echo)))
+  ;; (add-hook 'jabber-alert-info-message-hooks (quote (jabber-info-echo jabber-info-display)))
+  ;; (add-hook 'jabber-alert-muc-hooks (quote (jabber-muc-echo jabber-muc-scroll)))
+  ;; (add-hook 'jabber-alert-presence-hooks (quote (jabber-presence-echo)))
 
   (defun awesomewm-notification (from buffer text title)
     (let ((who (replace-regexp-in-string "/.*$" "" from))
@@ -43,8 +42,8 @@ This function is called at the very end of Spacemacs initialization."
                              (shell-quote-argument (format naughty-display-string who what))
                              " | awesome-client"))))
 
-;;   (awesomewm-notification "sdfsdf/asdf" "somethign" "asdf
-;; asdf" "asdf")
+  ;;   (awesomewm-notification "sdfsdf/asdf" "somethign" "asdf
+  ;; asdf" "asdf")
   
   (add-hook 'jabber-alert-message-hooks 'awesomewm-notification)
 
