@@ -1,5 +1,6 @@
 (setq-default dotspacemacs-configuration-layers '(auctex git company-mode erlang-elixir python themes-megapack moebs)) 
 
+(setq-default dotspacemacs-themes '(monokai hc-zenburn))
 
 (defun dotspacemacs/config ()
   "This is were you can ultimately override default Spacemacs configuration.
