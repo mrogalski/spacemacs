@@ -176,6 +176,7 @@ static char *note[] = {
  '(frame-brackground-mode (quote dark))
  '(fringe-mode 9 nil (fringe))
  '(global-hl-line-mode nil)
+ '(global-linum-mode nil)
  '(gnus-logo-colors (quote ("#528d8d" "#c0c0c0")))
  '(gnus-mode-line-image-cache
    (quote
