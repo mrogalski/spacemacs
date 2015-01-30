@@ -2,6 +2,10 @@
 
 (setq-default dotspacemacs-themes '(monokai hc-zenburn))
 
+(defun dotspacemacs/init ()
+  (setq-default evil-lisp-state-major-modes '(emacs-lisp-mode clojure-mode)) 
+  )
+
 (defun dotspacemacs/config ()
   "This is were you can ultimately override default Spacemacs configuration.
 This function is called at the very end of Spacemacs initialization."
