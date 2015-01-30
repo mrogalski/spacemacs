@@ -298,5 +298,6 @@ static char *gnus-pointer[] = {
  '(evil-search-highlight-persist-highlight-face ((t (:background "yellow4"))))
  '(jabber-chat-prompt-foreign ((t (:foreground "lawn green" :weight bold))))
  '(jabber-chat-text-foreign ((t (:foreground "navajo white"))))
+ '(jabber-rare-time-face ((t (:foreground "orchid" :underline t))))
  '(link ((t (:foreground "gold" :underline t :weight light))))
  '(sp-pair-overlay-face ((t (:inherit nil)))))
