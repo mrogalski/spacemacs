@@ -97,6 +97,8 @@ This function is called at the very end of Spacemacs initialization."
   (evil-leader/set-key "SPC" 'evil-lisp-state)
 
   (evil-leader/set-key "o a" 'align-cljlet)
+  (evil-leader/set-key "f d" nil)
+  (evil-leader/set-key "f D" 'delete-current-buffer-file)
 
   (require 'compile)
   (add-to-list 'compilation-error-regexp-alist-alist
