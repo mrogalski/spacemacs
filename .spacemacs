@@ -85,6 +85,8 @@ This function is called at the very end of Spacemacs initialization."
   (define-key evil-normal-state-map (kbd "<kp-add>") 'evil-numbers/inc-at-pt)
   (define-key evil-normal-state-map (kbd "<kp-subtract>") 'evil-numbers/dec-at-pt)
 
+  (define-key evil-normal-state-map (kbd "z s") 'evil-scroll-line-to-center)
+  (define-key evil-normal-state-map (kbd "z z") 'flyspell-goto-next-error)
 
   (setq org-agenda-files '("~/org/todo.org"
                            "~/org/events.org"))
