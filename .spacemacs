@@ -18,7 +18,7 @@ This function is called at the very end of Spacemacs initialization."
   ;; (global-linum-mode)
   ;; (linum-relative-toggle)
 
-  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/jabber-20150127.745/")
+  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/jabber-20150211.1330/")
 
   (require 'jabber)
 
