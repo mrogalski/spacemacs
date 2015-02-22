@@ -122,7 +122,28 @@ Display the results in a hyperlinked *compilation* buffer."
     (compile (concat "lein kibit " buffer-file-name)))
 
   (evil-set-initial-state 'cider-stacktrace-mode 'emacs)
+
+  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/rotate-text-0.1/")
+  (require 'rotate-text)
   
+  (add-to-list 'rotate-text-symbols
+               '("+" "-"))
+  (add-to-list 'rotate-text-words
+               '("true" "false"))
+
+  (defun my-clojure-text-rotation ()
+    (setq-local rotate-text-symbols
+                (append '(("neg?" "pos?")
+                          ("first" "second" "nth" "last")
+                          ("butfirst" "butlast")
+                          ("->" "->>")
+                          ("=" "not="))
+                        rotate-text-symbols)))
+
+
+  (add-hook 'clojure-mode-hook 'my-clojure-text-rotation)
+
+  (define-key evil-normal-state-map (kbd "-") 'rotate-text)
 )
 
 (custom-set-variables
