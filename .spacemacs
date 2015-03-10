@@ -1,9 +1,9 @@
-(setq-default dotspacemacs-configuration-layers '(auctex git company-mode erlang-elixir python themes-megapack moebs)) 
+(setq-default dotspacemacs-configuration-layers '(auctex git company-mode erlang-elixir python themes-megapack moebs))
 
 (setq-default dotspacemacs-themes '(monokai hc-zenburn))
 
 (defun dotspacemacs/init ()
-  (setq-default evil-lisp-state-major-modes '(emacs-lisp-mode clojure-mode)) 
+  (setq-default evil-lisp-state-major-modes '(emacs-lisp-mode clojure-mode))
   )
 
 (defun dotspacemacs/config ()
@@ -17,8 +17,6 @@ This function is called at the very end of Spacemacs initialization."
 
   ;; (global-linum-mode)
   ;; (linum-relative-toggle)
-
-  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/jabber-20150211.1330/")
 
   (require 'jabber)
 
@@ -48,7 +46,7 @@ This function is called at the very end of Spacemacs initialization."
 
   ;;   (awesomewm-notification "sdfsdf/asdf" "somethign" "asdf
   ;; asdf" "asdf")
-  
+
   (add-hook 'jabber-alert-message-hooks 'awesomewm-notification)
 
   (require 'undo-tree)
@@ -75,7 +73,7 @@ This function is called at the very end of Spacemacs initialization."
 
   (set-face-attribute 'default nil :font "DejaVu Sans Mono 11")
 
-  ;; anthy 
+  ;; anthy
   (define-obsolete-variable-alias 'last-input-char 'last-input-event "at least 19.34")
   (define-obsolete-variable-alias 'last-command-char 'last-command-event "at least 19.34")
 
@@ -90,7 +88,7 @@ This function is called at the very end of Spacemacs initialization."
 
   (setq org-agenda-files '("~/org/todo.org"
                            "~/org/events.org"))
-  (evil-leader/set-key "J" 'sp-join-sexp)  
+  (evil-leader/set-key "J" 'sp-join-sexp)
   (evil-leader/set-key "K" 'sp-split-sexp)
   (evil-leader/set-key "L" 'sp-forward-slurp-sexp)
   (evil-leader/set-key "H" 'sp-backward-slurp-sexp)
@@ -123,9 +121,8 @@ Display the results in a hyperlinked *compilation* buffer."
 
   (evil-set-initial-state 'cider-stacktrace-mode 'emacs)
 
-  (add-to-list 'load-path "/home/moebius/.emacs.d/elpa/rotate-text-0.1/")
   (require 'rotate-text)
-  
+
   (add-to-list 'rotate-text-symbols
                '("+" "-"))
   (add-to-list 'rotate-text-words
