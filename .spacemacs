@@ -88,6 +88,8 @@ This function is called at the very end of Spacemacs initialization."
 
   (setq org-agenda-files '("~/org/todo.org"
                            "~/org/events.org"))
+  (setq org-return-follows-link t)
+
   (evil-leader/set-key "J" 'sp-join-sexp)
   (evil-leader/set-key "K" 'sp-split-sexp)
   (evil-leader/set-key "L" 'sp-forward-slurp-sexp)
