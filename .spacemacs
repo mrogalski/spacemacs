@@ -143,6 +143,9 @@ Display the results in a hyperlinked *compilation* buffer."
   (add-hook 'clojure-mode-hook 'my-clojure-text-rotation)
 
   (define-key evil-normal-state-map (kbd "-") 'rotate-text)
+
+  (require 'flycheck)
+  (setq-default flycheck-flake8-maximum-complexity 10)
 )
 
 (custom-set-variables
