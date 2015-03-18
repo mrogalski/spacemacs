@@ -1,4 +1,4 @@
-(setq-default dotspacemacs-configuration-layers '(auctex git company-mode erlang-elixir python themes-megapack moebs))
+(setq-default dotspacemacs-configuration-layers '(auctex clojure finance git company-mode erlang-elixir markdown python themes-megapack moebs))
 
 (setq-default dotspacemacs-themes '(monokai hc-zenburn))
 
