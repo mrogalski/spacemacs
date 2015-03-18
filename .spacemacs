@@ -334,6 +334,7 @@ static char *gnus-pointer[] = {
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
  '(evil-search-highlight-persist-highlight-face ((t (:background "yellow4"))))
+ '(font-lock-comment-face ((t (:foreground "SpringGreen3"))))
  '(jabber-chat-prompt-foreign ((t (:foreground "lawn green" :weight bold))))
  '(jabber-chat-text-foreign ((t (:foreground "navajo white"))))
  '(jabber-rare-time-face ((t (:foreground "orchid" :underline t))))
