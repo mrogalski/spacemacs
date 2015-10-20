@@ -364,8 +364,8 @@ Display the results in a hyperlinked *compilation* buffer."
   (setq g++-lib-directory  "/usr/lib/gcc/x86_64-pc-linux-gnu/4.8.4/include/g++-v4")
 
   (require 'flycheck-google-cpplint)
-  Add Google C++ Style checker.
-  In default, syntax checked by Clang and Cppcheck.
+  ;; Add Google C++ Style checker.
+  ;; In default, syntax checked by Clang and Cppcheck.
   (flycheck-add-next-checker 'c/c++-cppcheck
                              '(warning . c/c++-googlelint))
   (add-to-list 'company-c-headers-path-system g++-lib-directory)
